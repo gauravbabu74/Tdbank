@@ -403,7 +403,7 @@ padding: 1px 14px 3px;  margin-right: 14px;}
 .summarytable td{ background:#f5f5f5; padding:7px 7px;  border-bottom:solid 1px #E3DFDF;border-right:solid 1px #E3DFDF;}
 .summarytable th.last{ border-right:0;}
 .summarytable td.last{border-right:0;}
-#aplicn_tdBank .IN1.sml{ width:71px}
+#aplicn_tdBank .IN1.sml{ width:116px}
 .summarytable td input{ margin-bottom:0!important}
 #aplicn_tdBank .rws.optcity{ display:none;}
 .titleLabel strong{display: block;font-size: 13px;padding: 0 0 5px; color:#666;}
@@ -455,7 +455,7 @@ h2.subtitle{color: #666666;float: left;font-size: 15px; font-weight: bold; margi
 #aplicn_tdBank .IN1.sml-amt{width: 30px;}
 #aplicn_tdBank h3.subtitle { color: #666666; float: left; font-size: 15px; font-weight: bold; margin: 30px 0 10px; padding: 0;}
 #aplicn_tdBank .rws td .conditionBlock { margin-right:50px;}
-#aplicn_tdBank .rws p.optText{float: right; padding-top: 9px; width: 639px;} 
+#aplicn_tdBank .rws p.optText{float: left; padding-top: 9px; width: 639px;} 
 #aplicn_tdBank .IN1.half{ width: 338px;}
 #aplicn_tdBank .rws p.opt.filter span{ float:left; width:124px; }
 #aplicn_tdBank .rws p.opt.filter input{ float:left; margin-right:5px;}
