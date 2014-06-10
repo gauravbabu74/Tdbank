@@ -1,0 +1,30 @@
+#wrapper{margin:0 auto; background-color:#FFF; 	width:100%;  	position:relative; overflow-x:hidden; 	z-index:50;}
+#menumobile{ 	position:absolute; top: 0;  left:0; padding-left:3%; padding-right:3%; z-index: 100; 	color: #000; margin-top:0px; 	width: 20px; 	height: 54px;  cursor:pointer; 	background-image:url(images/menu.png); background-repeat:no-repeat; background-position: center center;  padding-top:0px; text-transform:uppercase; font-size:20px; }
+.mobile{margin:0; padding:0; position:absolute; height:100%; width:230px; overflow:hidden; left:0px; background:#262626; display:block; overflow:auto; z-index:25; top:0}
+.menu{display:none;}
+header{ width:100%; background-color:#faf8e9; border-bottom:1px solid #E1E1E1; margin-bottom:20px}
+section{ width:94%; padding:25px 0px 30px 0px; float:none; margin:0px auto }
+.logo{ width:130px; height:43px; display:block; float:none; padding-left:6%; margin-left:20px; padding-top:10px; background:transparent; text-align:center}
+.logo a{ background-image:url(../images/layout/b2c-dash.png); background-repeat:no-repeat; display:block; height:56px; background-position:-690px 2px;}
+
+ ul.mobile li{ 	float:none; 	display:block; 	border-bottom:1px solid #111111; overflow:hidden; 	border-top:1px solid #333333; }
+ul.mobile li a{ display:block; border-right:0px; border-left:0px; color:#ccc; background-color:#1e1e1e;  font-size:14px; padding:15px 10px 15px 15px; margin-right:0px; background-position: 178px 16px  }
+ul.mobile li a.activ:hover{ background-color:#FFF; color:#333}
+ul.mobile li a span{ opacity:1.0}
+ul.mobile li a:hover{ display:block; font-size:14px;  background-color:#000; color:#aee518 }
+#help{ padding-bottom:10px;}
+.helnum { padding-top: 40px; padding-bottom:0px; }
+.helnum h2{ color:#999}
+.helpcont{width:127px; float:right; position:absolute; top:7px; right:3%;}
+#help h1{ font-size:24px; color:#333333; float:none; padding-bottom:10px; width:100%; display:block}
+#stps ul li span { line-height:14px; } 
+#stps ul li strong {   height: 38px; }
+.stpsumry{ width:100%; float:none; text-align:center}
+.stpcurrntAc{ width:100%; padding-top:10px; float:none; text-align:center}
+.helpnv{ background-color:#666;}
+.helpnv.act{background-color:#333;}
+.helpcontain ul{ background-color:#333;}
+.titcl {font-size: 19px}
+
+/* 6 mar */
+.lefthelpdsk{ display:none}

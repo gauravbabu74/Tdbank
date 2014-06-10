@@ -4,136 +4,469 @@
     <title></title>
     <meta charset="utf-8" />
     <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
-    <link href="styles/main.css" rel="stylesheet" />
-
-    <script src="cordova.js"></script>
+    <link rel="stylesheet" href="css/skin_main.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/dsh_skin2.css" type="text/css" media="all" />
     <script src="kendo/js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/rwd/main.js"></script>
+	<script type="text/javascript" src="js/general.js"></script>
+    <script src="cordova.js"></script>
     <script src="kendo/js/kendo.mobile.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
-
-    <script src="scripts/login.js"></script>
-    <script src="scripts/location.js"></script>
-    <script src="scripts/weather.js"></script>
+    <script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+	<script language="javascript" type="text/javascript" src="js/chrt/stked/jquery.flot.js"></script>
+	<script language="javascript" type="text/javascript" src="js/chrt/stked/jquery.flot.stack.js"></script>
+	<link rel="stylesheet" href="js/tipsy/tipsy.css" type="text/css" />
+	<script type="text/javascript" src="js/tipsy/jquery.tipsy.js"></script>
+	<link rel="shortcut icon" href="images/favicon.ico" />
     <script src="scripts/app.js"></script>
 </head>
 <body>
     <!--Home View-->
-    <div id="tabstrip-home"
-        data-role="view"
-        data-title="Home">
-        <header data-role="header">
-            <div data-role="navbar">
-                <span data-role="view-title"></span>
-                <a id="skin-change" data-role="button" data-align="right" data-click="app.changeSkin">Flat</a>
-            </div>
-        </header>
-
-        <h3>Welcome!</h3>
-        <p>
-            Telerik AppBuilder&trade; enables you to build cross-platform device applications regardless of your
-            development platform by combining the convenience of a local development toolset with the
-            power and flexibility of the cloud.
-        </p>
-        <div class="welcome-image"></div>
+    <div id="wrapper" data-role="view">
+          <header class="clearfix">
+            <nav>
+              <div id="fullheds">
+                <div id="menutops">
+                  <div class="logo"><a href="./">&nbsp;</a></div>
+                  <ul class="nav-menu">
+                    <li><a href="#" data-role="button" class="activ"><span class="nc1"></span>Dashboard <b>10</b></a></li>
+                    <li><a href="#"><span class="nc2"></span>Leads</a></li>
+                    <li><a href="#"><span class="nc3"></span>Manage Cases</a></li>
+                    <li><a href="#"><span class="nc4"></span>Documents</a></li>
+                    <li><a href="#"><span class="nc5"></span>Reports</a></li>
+                    <li><a href="#"><span class="nc6"></span>Account</a></li>
+                    <li><a href="#"><span class="nc7"></span>Logout</a></li>
+                    <li><a href="#"><span class="nc8"></span>Go back to Home</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- helpfull prod-->
+              <div class="lefthelpdsk">
+                <h6>Helpful Products</h6>
+                <ul>
+                  <li><a href="#"><span class="nc1"></span>Equifax</a></li>
+                  <li><a href="#"><span class="nc2"></span>IRS Transcript</a></li>
+                  <li><a href="#"><span class="nc3"></span>UCC Search</a></li>
+                  <li><a href="#"><span class="nc4"></span>E-Signature</a></li>
+                  <li><a href="#"><span class="nc5"></span>Incorporation Documents</a></li>
+                </ul>
+              </div>
+              <!-- helpfull prod-->
+            </nav>
+          </header>
+  <section>
+    <div class="helnum">
+      <h2>Call toll free  877-861-2210</h2>
     </div>
-
-    <!--Login View-->
-    <div id="tabstrip-login"
-        data-role="view"
-        data-title="Login"
-        data-model="app.loginService.viewModel">
-
-        <div class="logo-image"></div>
-        <div>
-            <h3 data-bind="visible: isLoggedIn">Welcome, <span data-bind="    text: username"></span>!</h3>
-            <input id="logout" type="submit" data-role="button" data-bind="click: onLogout, visible: isLoggedIn" value="Logout" class="login-button" />
-        </div>
-        <form data-bind="events: { keyup: checkEnter }">
-            <h3 data-bind="invisible: isLoggedIn">Enter your credentials:</h3>
-            <ul data-role="listview" data-style="inset" data-bind="invisible: isLoggedIn">
-                <li>
-                    <label>
-                        <div>Username</div>
-                        <input type="text" data-bind="value: username" />
-                    </label>
-                </li>
-                <li>
-                    <label>
-                        <div>Password</div>
-                        <input type="password" data-bind="value: password" />
-                    </label>
-                </li>
+    <section>
+      <form id="B2cAppForms" class="cmxform" action="#" method="post" novalidate="novalidate">
+        <article id="aplicn_tp">
+          <div class="warps clearfix">
+            <ul class="app_nav">
+              <li class="activ"><span>Business Information</span></li>
+              <li><span>Personal Financial Statement</span></li>
             </ul>
-            <input id="login" type="submit" data-role="button" data-bind="click: onLogin, invisible: isLoggedIn" value="Login" class="login-button" />
-        </form>
-    </div>
-
-    <!--Location View-->
-    <div id="tabstrip-location"
-        data-role="view"
-        data-title="Location"
-        data-init="app.locationService.initLocation"
-        data-show="app.locationService.show"
-        data-hide="app.locationService.hide"
-        data-model="app.locationService.viewModel"
-        data-stretch="true">
-
-        <div id="map-canvas" class="map" data-bind="visible: isGoogleMapsInitialized"></div>
-
-        <div id="no-map" data-bind="invisible: isGoogleMapsInitialized">
-            <h3>Location requires internet connection to display the map.</h3>
-        </div>
-        <div id="map-search-wrap" class="map-tools" data-bind="visible: isGoogleMapsInitialized">
-            <div>
-                <button id="map-navigate-home" class="map-tools-button home" data-bind="click: onNavigateHome"></button>
-                <input id="map-address" type="search" class="map-tools-input" data-bind="value: address" placeholder="Address" />
-                <button id="map-search" class="map-tools-button search" data-bind="click: onSearchAddress"></button>
+          </div>
+        </article>
+        <article id="aplicn_step">
+          <div class="warps clearfix">
+            <ul class="clearfix">
+              <li class="activetrail"><span>Purpose/Product/ <br>
+                Automatic Payment Deduction</span> </li>
+              <li><span>Business Information <br>
+                (Applicant/Borrower)</span> </li>
+              <li><span>Business Obligations/<br>
+                Deposit Relationships</span></li>
+              <li><span>Business Financials</span> </li>
+              <li><span>Declarations</span></li>
+            </ul>
+          </div>
+        </article>
+        <article id="aplicn_tdBank">
+          <div class="warps clearfix">
+            <div class="sub-step1">
+              <div class="toparea clearfix">
+                <h2>Small Business Loan Application</h2>
+                <div class="coln">
+                  <input type="submit" class="BTgry" value="Save &amp; Exit" name="">
+                  <input type="submit" class="BTgren" value="Next" id="next" name="next">
+                </div>
+              </div>
+              <div class="rws rw2 clearfix">
+                <div class="rwfil aut clearfix">
+                  <p>
+                    <input type="text" required="" placeholder="Officer Name" id="officer_name" name="officername" class="IN1 ipsm3" original-title="Officer Name">
+                  </p>
+                  <p>
+                    <input type="text" required="" placeholder="Officer" id="officer" name="officer" class="IN1 ipsm3" original-title="Officer">
+                  </p>
+                  <p>
+                    <input type="text" required="" placeholder="Phone" id="phone" name="phone" class="IN1 ipsm3" original-title="phone">
+                  </p>
+                </div>
+                <div class="rwfil aut clearfix">
+                  <p>
+                    <input type="text" required="" placeholder="Store" id="store" name="store" class="IN1 ipsm3" original-title="Store">
+                  </p>
+                  <p>
+                    <input type="text" required="" placeholder="Store Name" id="storename" name="storename" class="IN1 ipsm3" original-title="Store Name:">
+                  </p>
+                  <p>
+                    <input type="text" required="" placeholder="Sourced by" id="sourcedby" name="Sourced by" class="IN1 ipsm3" original-title="Sourced by">
+                  </p>
+                </div>
+                <div class="rws clearfix">
+                  <h3>Purpose</h3>
+                  <p>The following information is needed to better understand the lending needs for your business.</p>
+                </div>
+                <div class="rws">
+                  <div class="titleLabel rws">Select all that apply.</div>
+                  <table cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td width="50%" align="right" valign="top"><table cellpadding="0" cellspacing="0" width="100%">
+                          <tr>
+                            <td width="50%"><p>
+                                <label>
+                                <input name="" type="checkbox" value="">
+                                General or Capital Expenditures</label>
+                              </p></td>
+                          </tr>
+                          <tr>
+                            <td width="50%"><p>
+                                <label>
+                                <input name="" type="checkbox" class="purchaseprice1" value="">
+                                Purchase an Existing Business</label>
+                              </p></td>
+                          </tr>
+                          <tr>
+                            <td width="50%"><div class="conditionBlock clearfix purchaseprice">
+                                <p style="padding-bottom:0;">
+                                  <input type="text" original-title="Purchase Price $" style="margin-bottom:0;" class="IN1 ipsm3" name="Specify Use" id="specifyuse" placeholder="Purchase Price $" required="">
+                                </p>
+                              </div></td>
+                          </tr>
+                          <tr>
+                            <td width="50%"><p>
+                                <label>
+                                <input name="" type="checkbox" value="">
+                                Refinance or Debt Consolidation</label>
+                              </p></td>
+                          </tr>
+                          <tr>
+                            <td width="50%"><p>
+                                <label>
+                                <input name="" type="checkbox" class="workingcapital1" value="">
+                                Working Capital</label>
+                              </p></td>
+                          </tr>
+                          <tr>
+                            <td width="50%"><div class="conditionBlock clearfix specifyuse">
+                                <p  style="padding-bottom:0;">
+                                  <input type="text" required="" placeholder="Specify Use" id="specifyuse" name="Specify Use" class="IN1 ipsm3" style="margin-bottom:0;" original-title="Specify Use">
+                                </p>
+                              </div></td>
+                          </tr>
+                          <tr>
+                            <td width="50%"><p>
+                                <label>
+                                <input name="purchaseequipment"  class="purchaseequipment1" type="checkbox" value="">
+                                Purchase Equipment </label>
+                              </p></td>
+                          </tr>
+                          <tr>
+                            <td width="50%"><div class="conditionBlock clearfix purchaseequipment">
+                                <p  style="padding-bottom:0;">
+                                  <input type="text" required="" placeholder="Specify Use" id="please_describe" name="Please Describe" class="IN1 ipsm3" style="margin-bottom:0;" original-title="Please Describe">
+                                </p>
+                              </div></td>
+                          </tr>
+                          <tr>
+                            <td width="100%" valign="top"><p>
+                                <label>
+                                <input type="checkbox" value="" class="modification1" name="modification">
+                                Modification to an Existing TD Bank Loan</label>
+                              </p></td>
+                          </tr>
+                          <tr>
+                            <td><div class="conditionBlock clearfix modification">
+                                <p  style="padding-bottom:0;"> <span>(excluding interest rate &amp; fee changes) Existing TD Bank loan #:</span>
+                                  <input type="text" required="" placeholder="excluding interest" id="excludinginterest" name="excludinginterest" class="IN1 ipsm3" style="margin-bottom:0;" original-title="excluding interest">
+                                </p>
+                                <p style="padding-bottom:0;"> <span style="display:block; margin-top:12px;">Change Requested</span>
+                                  <input type="text" required="" placeholder="Please Describe" id="please_describe2" name="Please Describe" class="IN1 ipsm3" style="margin-bottom:0;" original-title="Please Describe">
+                                </p>
+                              </div></td>
+                          </tr>
+                        </table></td>
+                      <td width="50%" align="left" valign="top"><table cellpadding="0" cellspacing="0" width="100%">
+                          <tr>
+                            <td width="50%"><p>
+                                <label>
+                                <input name="" type="checkbox" value="">
+                                Business Improvements</label>
+                              </p></td>
+                          </tr>
+                          <tr>
+                            <td width="50%"><p>
+                                <label>
+                                <input name="" type="checkbox" value="">
+                                Start up</label>
+                              </p></td>
+                          </tr>
+                          <tr>
+                            <td width="50%"><p>
+                                <label>
+                                <input name="" type="checkbox" class="realestate1" value="">
+                                Purchase of Real Estate</label>
+                              </p></td>
+                          </tr>
+                          <tr>
+                            <td width="50%"><div class="conditionBlock clearfix realestate">
+                                <p style="padding-bottom:0;">
+                                  <input type="text" original-title="Down Payment $" style="margin-bottom:0;" class="IN1 ipsm3" name="Specify Use" id="specifyuse" placeholder="Down Payment $" required="">
+                                </p>
+                              </div></td>
+                          </tr>
+                          <tr>
+                            <td width="50%"><p>
+                                <label>
+                                <input name="" type="checkbox" class="purchasevehicle1" value="">
+                                Purchase Vehicle</label>
+                              </p></td>
+                          </tr>
+                          <tr>
+                            <td width="50%"><div class="conditionBlock clearfix pleasedescribe">
+                                <p  style="padding-bottom:0;">
+                                  <input type="text" required="" placeholder="Please Describe" id="pleasedescribe" name="pleasedescribe" class="IN1 ipsm3" style="margin-bottom:0;" original-title="Please Describe">
+                                </p>
+                              </div></td>
+                          </tr>
+                          <tr>
+                            <td width="50%"><p>
+                                <label>
+                                <input name="" class="others1" type="checkbox" value="">
+                                Other</label>
+                              </p></td>
+                          </tr>
+                          <tr>
+                            <td width="50%"><div class="conditionBlock clearfix others">
+                                <p  style="padding-bottom:0;">
+                                  <input type="text" required="" placeholder="Please Describe" id="please_describe1" name="Please Describe" class="IN1 ipsm3" style="margin-bottom:0;" original-title="Please Describe">
+                                </p>
+                              </div></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="rws clearfix">
+                  <h3>Product</h3>
+                  <p>Tell us which loan product(s) will help you meet your business needs.</p>
+                  <div class="rightBox">
+                    <p>
+                      <input name="New" type="radio" value="">
+                      <span><strong>New</strong></span></p>
+                    <p>
+                      <input name="New" type="radio" value="">
+                      <span><strong>Increase</strong></span></p>
+                    <p>
+                      <input name="New" type="radio" value="">
+                      <span><strong>Renewal</strong></span></p>
+                  </div>
+                </div>
+                <div class="rws">
+                  <table width="100%" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td width="50%" valign="top" align="right"><table width="100%" cellspacing="0" cellpadding="0">
+                            <tbody>
+                              <tr>
+                                <td width="100%"><p>
+                                    <label>
+                                    <input type="checkbox" value="" class="commercialmortgage1" name="">
+                                    Commercial Real Estate Mortgage</label>
+                                  </p></td>
+                              </tr>
+                              <tr>
+                                <td><div class="conditionBlock clearfix commercialmortgage">
+                                    <p  style="padding-bottom:0;"> <span style="display:inline-block;margin-bottom: 22px;width: 148px;">Fixed Rate (3 or 5 yrs)</span>
+                                      <select original-title="Fixed Rate (3 or 5 yrs)" class="IN1b ipsm3" id="fixed_rate" name="fixed_rate" required="">
+                                        <option value="">Select Rate</option>
+                                        <option value="">(3 or 5 yrs)</option>
+                                        <option value="">(5 or 8 yrs)</option>
+                                      </select>
+                                    </p>
+                                    <p style="padding-bottom:0;"> <span>Amortization (10 or 20 yrs)</span>
+                                      <select original-title="Amortization (10 or 20 yrs)" class="IN1b ipsm3" id="amortization" name="amortization" required="">
+                                        <option value="">Select Amortization</option>
+                                        <option value="">(10 or 20 yrs)</option>
+                                        <option value="">(20 or 30 yrs)</option>
+                                      </select>
+                                    </p>
+                                    <p style="padding-bottom:0;"> <span style="width: 148px; display:inline-block;">Amount Requested</span>
+                                      <input type="text" required="" placeholder="Amount Requested" id="specifyuse" name="Amount Requested" class="IN1 midium2" style="margin-bottom: 0;
+    margin-top: 12px;width: 158px;" original-title="Purchase Price $">
+                                    </p>
+                                  </div></td>
+                              </tr>
+                              <tr>
+                                <td width="100%"><p>
+                                    <label>
+                                    <input type="checkbox" value="" class="Termloan1" name="">
+                                    Term Loan</label>
+                                  </p></td>
+                              </tr>
+                              <tr>
+                                <td width="100%"><div class="conditionBlock clearfix Termloan">
+                                    <p  style="padding-bottom:0;"> <span style="display:inline-block;margin-bottom: 0;width: 148px;">Fixed Rate (3 or 5 yrs)</span>
+                                      <select original-title="Fixed Rate (3 or 5 yrs)" class="IN1b ipsm3" id="fixed_rate" name="fixed_rate" required="">
+                                        <option value="">Select Rate</option>
+                                        <option value="">(3 or 5 yrs)</option>
+                                        <option value="">(5 or 8 yrs)</option>
+                                      </select>
+                                    </p>
+                                    <p style="padding-bottom:0;"> <span style="width: 148px; display:inline-block;">Amount Requested</span>
+                                      <input type="text" required="" placeholder="Amount Requested" id="specifyuse" name="Amount Requested" class="IN1 midium2" style="margin-bottom: 0;
+    margin-top: 12px;width: 158px;" original-title="Purchase Price $">
+                                    </p>
+                                  </div></td>
+                              </tr>
+                              <tr>
+                                <td width="100%"><p>
+                                    <label>
+                                    <input type="checkbox" value="" class="lettercredit1" name="">
+                                    Letter of Credit</label>
+                                  </p></td>
+                              </tr>
+                              <tr>
+                                <td width="100%"><div class="conditionBlock clearfix lettercredit">
+                                    <p style="padding-bottom:0;">
+                                      <input type="text" required="" placeholder="Purchase Price $" id="specifyuse" name="Specify Use" class="IN1 ipsm3" style="margin-bottom:0;" original-title="Purchase Price $">
+                                    </p>
+                                  </div></td>
+                              </tr>
+                              <tr>
+                                <td width="100%"><p>
+                                    <label>
+                                    <input type="checkbox" class="Expresslease1" value="" name="">
+                                    Express Lease</label>
+                                  </p></td>
+                              </tr>
+                              <tr>
+                                <td width="100%"><div class="conditionBlock clearfix Expresslease">
+                                    <p  style="padding-bottom:0;"> <span style="display:inline-block;margin-bottom: 0;width: 182px;">Express Lease Term (up to 7 yrs)</span>
+                                      <select original-title="Fixed Rate (3 or 5 yrs)" class="IN1b ipsm3" id="fixed_rate" name="fixed_rate" required="">
+                                        <option value="">Express Lease Term</option>
+                                      </select>
+                                    </p>
+                                    <p style="padding-bottom:0;"> <span style="width: 181px; display:inline-block;">Amount Requested</span>
+                                      <input type="text" required="" placeholder="Amount Requested" id="specifyuse" name="Amount Requested" class="IN1 midium2" style="margin-bottom: 0;
+    margin-top: 12px;width: 158px;" original-title="Purchase Price $">
+                                    </p>
+                                  </div></td>
+                              </tr>
+                            </tbody>
+                          </table></td>
+                        <td width="50%" valign="top" align="left"><table width="100%" cellspacing="0" cellpadding="0">
+                            <tbody>
+                              <tr>
+                                <td width="50%"><p>
+                                    <label>
+                                    <input type="checkbox" value="" class="Lineofcredit1" name="">
+                                    Line of Credit</label>
+                                  </p></td>
+                              </tr>
+                              <tr>
+                                <td width="50%"><div class="conditionBlock clearfix Lineofcredit">
+                                    <p style="padding-bottom:0;">
+                                      <input type="text" required="" placeholder="Down Payment $" id="specifyuse2" name="specifyuse" class="IN1 ipsm3" style="margin-bottom:0;" original-title="Down Payment $">
+                                    </p>
+                                  </div></td>
+                              </tr>
+                              <tr>
+                                <td width="50%"><p>
+                                    <label>
+                                    <input type="checkbox" class="SBHome1" value="" name="">
+                                    SB Home Equity Line of Credit</label>
+                                  </p></td>
+                              </tr>
+                              <tr>
+                                <td width="50%"><div class="conditionBlock clearfix SBHome">
+                                    <p style="padding-bottom:0;">
+                                      <input type="text" required="" placeholder="Down Payment $" id="specifyuse2" name="specifyuse" class="IN1 ipsm3" style="margin-bottom:0;" original-title="Down Payment $">
+                                    </p>
+                                  </div></td>
+                              </tr>
+                              <tr>
+                                <td width="50%"><p>
+                                    <label>
+                                    <input type="checkbox" value="" class="Timeloan1" name="">
+                                    Time Loan (up to 90 days)</label>
+                                  </p></td>
+                              </tr>
+                              <tr>
+                                <td width="50%"><div class="conditionBlock clearfix Timeloan">
+                                    <p style="padding-bottom:0;">
+                                      <input type="text" required="" placeholder="Down Payment $" id="specifyuse2" name="specifyuse" class="IN1 ipsm3" style="margin-bottom:0;" original-title="Down Payment $">
+                                    </p>
+                                  </div></td>
+                              </tr>
+                              <tr>
+                                <td width="50%"><p>
+                                    <label>
+                                    <input type="checkbox" value="" class="ACH1" name="">
+                                    ACH Limit Requested:</label>
+                                  </p></td>
+                              </tr>
+                              <tr>
+                                <td width="50%"><div class="conditionBlock clearfix  ACH">
+                                    <p  style="padding-bottom:0;"> <span style="display: inline-block;width:54px;">Debit</span>
+                                      <input type="text" required="" placeholder="excluding interest" id="Debit" name="Debit" class="IN1 ipsm3" style="margin-bottom:0;" original-title="$ Monthly Payment">
+                                    </p>
+                                    <p style="padding-bottom:0;"> <span style="display: inline-block; margin-top:21px; width:54px;">Credit</span>
+                                      <input type="text" required="" placeholder="Please Describe" id="Credit" name="Credit" class="IN1 ipsm3" style="margin-bottom:0;" original-title="Please Describe">
+                                    </p>
+                                  </div></td>
+                              </tr>
+                            </tbody>
+                          </table></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="rws clearfix">
+                <h3>Automatic Payment Deduction</h3>
+              </div>
+              <div class="rwfil aut clearfix">
+                <p>Automatic Payment Deduction will save you time &amp; money by automatically deducting your monthly payment(s) from your<br>
+                  TD Bank Business Checking account</p>
+              </div>
+              <div class="rwfil aut rws clearfix">
+                <p>
+                  <input type="text" original-title="Account Number" style="margin-bottom:0; width:725px;" class="IN1" name="Account Number" id="account_no" placeholder="Account Number" required="">
+                </p>
+                <p>Auto deduction from a TD Bank Business Checking account must be established in order to save 1.00% on your interest rate (excluding Express Lease).</p>
+              </div>
             </div>
-        </div>
-    </div>
-
-    <!--Weather View-->
-    <div id="tabstrip-weather"
-        data-role="view"
-        data-title="Weather"
-        data-model="app.weatherService.viewModel">
-
-        <ul data-role="listview" data-style="inset"
-            data-bind="source: weatherDataSource"
-            data-template="weather-forecast-template">
-        </ul>
-    </div>
-
-    <!--Weather forecast template-->
-    <script id="weather-forecast-template" type="text/x-kendo-tmpl">
-        <div class="w-item-template">
-            <span class="w-icon ${image}"></span>
-            <h4 class="w-date">${day}</h4>
-            <div class="w-temp">
-                <span>${highTemperature}<sup>&deg;</sup></span>
-                <span>${lowTemperature}<sup>&deg;</sup></span>
+          </div>
+        </article>
+        <article id="aplicn_btm">
+          <div class="warps">
+            <div class="coln">
+              <input name="" type="submit" value="Save &amp; Exit" class="BTgry">
+              <input name="next" type="submit" id="next" value="Next"  class="BTgren">
             </div>
-        </div>
-    </script>
-
-    <!--Layout-->
-    <div data-role="layout" data-id="tabstrip-layout">
-        <!--Header-->
-        <div data-role="header">
-            <div data-role="navbar">
-                <span data-role="view-title"></span>
-            </div>
-        </div>
-
-        <!--Footer-->
-        <div data-role="footer">
-            <div data-role="tabstrip">
-                <a href="#/" data-icon="home">Home</a>
-                <a href="#tabstrip-login" data-icon="contacts">Login</a>
-                <a href="#tabstrip-location" data-icon="search">Location</a>
-                <a href="#tabstrip-weather" data-icon="globe">Weather</a>
-            </div>
-        </div>
+          </div>
+        </article>
+      </form>
+    </section>
+    <div class="copyright clearfix">
+      <div class="copybx"> <a href="#">Privacy</a> <span>|</span><a href="#">Terms</a> <span>|</span><a href="sitemap.html">Sitemap</a>
+        <p>&copy; Biz2Credit.com 2012-13. All rights reserved.</p>
+      </div>
     </div>
+  </section>
+</div>
 </body>
 </html>
