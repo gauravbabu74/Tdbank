@@ -148,12 +148,12 @@ $('.Termloan1').click(function() {
     }
 });
 
-$('.dueyes1').click(function() {	
+$('.dueyes1').change(function() {	
 
       $(".dueyes").show();
     
 });
-$('.dueno1').click(function() {	
+$('.dueno1').change(function() {	
 
       $(".dueyes").hide();
     
