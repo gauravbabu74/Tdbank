@@ -316,7 +316,7 @@ input[type="submit"], input[type="reset"]{ cursor:pointer}
 #aplicn_tdBank label.error{ display:block; color:#fd3608; font-size:11px; }
 #aplicn_tdBank .rws .rwfil label.error{ display:block; color:#fd3608; font-size:11px; }
 #aplicn_tdBank input[type="text"]:focus{     background-color: #f6ffea;     color:000000;    border:1px solid #bfe885 }
-#aplicn_tdBank .rws select { font-family:'OpenSansReg', Arial, Helvetica, sans-serif; font-size:12px; color:#333; padding:6px 7px 6px 7px; border:1px solid #CCC;  -webkit-border-radius:5px; border-radius: 5px; }
+#aplicn_tdBank .rws select { font-family:'OpenSansReg', Arial, Helvetica, sans-serif; font-size:12px; color:#333; padding:0; height: 33px;border:1px solid #CCC;  -webkit-border-radius:5px; border-radius: 5px; }
 #aplicn_tdBank .rws select option { font-family:'OpenSansReg', Arial, Helvetica, sans-serif; font-size:12px; color:#333; padding:1px 4px; }
 #aplicn_tdBank  .onwonwr{ padding:50px 0px; margin-bottom:40px; border-top:1px solid #CCC;}
 #aplicn_tdBank .que_hint{ width:25px; height:19px; margin-left:-4px; margin-right:14px; background-image:url(../images/layout/quest_hint.png); background-repeat:no-repeat; display:inline-block;}
@@ -393,7 +393,7 @@ padding: 1px 14px 3px;  margin-right: 14px;}
 #aplicn_tdBank .rws.reason textarea{ width:906px}
 .toparea h2{ padding:0 0 25px 0; margin:0 0 0 0; font-size:15px; font-weight:bold; float:left; color:#666666; }
 .toparea .coln { float:right; margin-top:0}
-.toparea .BTgry{ background-color:#999999; font-family:'OpenSansBol', Arial, Helvetica, sans-serif; font-size:16px; color:#FFF; padding:2px 14px 5px 14px; margin-left:5px;  -webkit-border-radius: 4px; border-radius: 4px; cursor:pointer }
+body .toparea .BTgry{ background-color:#999999;border:0!important; font-family:'OpenSansBol', Arial, Helvetica, sans-serif; font-size:16px; color:#FFF; padding:2px 14px 5px 14px; margin-left:5px;  -webkit-border-radius: 4px; border-radius: 4px; cursor:pointer }
 .toparea .BTgren{ background-color:#99cc00; font-family:'OpenSansBol', Arial, Helvetica, sans-serif; font-size:16px; color:#FFF; padding:1px 14px 3px 14px; margin-left:5px;  -webkit-border-radius: 4px; border-radius: 4px; cursor:pointer}
 .summarytable{ clear:both; border-radius:4px; overflow:hidden;}
 .summarytable.left60 { float:left; width:60%; margin:0 3% 0 0;}
@@ -438,7 +438,7 @@ padding: 1px 14px 3px;  margin-right: 14px;}
 #aplicn_tdBank .summarytable table p.opt {padding-bottom: 0; padding-top: 11px;width: 89px;}
 #aplicn_tdBank .summarytable table p.opt.wth120 { width:120px;}
 #aplicn_tdBank .summarytable table p.opt span{ display: inline-block; margin:0 6px 0 3px; position:relative; top:-1px;}
-#aplicn_tdBank .midium{  width: 79px;}
+#aplicn_tdBank .midium{  width: 89px;}
 #aplicn_tdBank .midium.calic{width:64px}
 h2.subtitle{color: #666666;float: left;font-size: 15px; font-weight: bold; margin: 30px 0 10px 0;padding: 0 0 0;}
 #aplicn_tdBank .summarytable tr.total td strong{ font-size:14px}
