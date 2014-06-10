@@ -147,9 +147,15 @@ $('.Termloan1').click(function() {
        $(".Termloan").hide();
     }
 });
+ 
     
     
-$('.dueyes1').click(function() {	
+    
+
+    
+$('.dueyes1').mouseDown(function() {
+        alert("test");
+
 	if($(this).is(':checked')) {		
       $(".dueyes").show();
     } else {
