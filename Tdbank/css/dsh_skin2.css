@@ -463,3 +463,5 @@ h2.subtitle{color: #666666;float: left;font-size: 15px; font-weight: bold; margi
 section section{ margin:0; padding-left:0;}
 #aplicn_tdBank select.ipsm3{    width: 244px;}
 .sub-step1{ padding-left:10px;}
+
+#aplicn_tdBank .rws p, #aplicn_tdBank .rws h2, #aplicn_tdBank .rws h3. #aplicn_tdBank .rwfil p{ margin-left:0!important; margin-right:0!important; padding-left:0!important; padding-right:0!important;}
