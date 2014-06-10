@@ -147,16 +147,14 @@ $('.Termloan1').click(function() {
        $(".Termloan").hide();
     }
 });
-
-$('.dueyes1').change(function() {	
-
+    
+    
+$('.dueyes1').click(function() {	
+	if($(this).is(':checked')) {		
       $(".dueyes").show();
-    
-});
-$('.dueno1').change(function() {	
-
-      $(".dueyes").hide();
-    
+    } else {
+       $(".dueyes").hide();
+    }
 });
 
 
