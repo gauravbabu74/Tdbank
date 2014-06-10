@@ -149,13 +149,10 @@ $('.Termloan1').click(function() {
 });
  
     
-    
-    
 
     
-$('.dueyes1').mouseDown(function() {
-        alert("test");
-
+$('.dueyes1').tap(function(event) {
+    alert("test");
 	if($(this).is(':checked')) {		
       $(".dueyes").show();
     } else {
