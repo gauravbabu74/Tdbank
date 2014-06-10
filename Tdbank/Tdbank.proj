@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ProjectGuid>50352ce4-7b44-446d-b792-a417c6a1dad8</ProjectGuid>
     <ProjectTypeGuids>{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}</ProjectTypeGuids>
-    <AppIdentifier>com.telerik.Biz2Credit</AppIdentifier>
+    <AppIdentifier>com.telerik.Tdbank</AppIdentifier>
     <ProjectName>Tdbank</ProjectName>
     <IsRunnable>true</IsRunnable>
     <FrameworkVersion>3.2.0</FrameworkVersion>
