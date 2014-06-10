@@ -1,53 +1,28 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>TD Bank form 8</title>
-<!--[if lt IE 9]> <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script> <![endif]-->
-<!--[if lte IE 8]><script src="js/html5.js"></script><![endif]-->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-<link rel="stylesheet" href="css/skin_main.css" type="text/css" media="all" />
-<link rel="stylesheet" href="css/dsh_skin2.css" type="text/css" media="all" />
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-<script type="text/javascript" src="js/rwd/main.js"></script>
-<script type="text/javascript" src="js/general.js"></script>
-<link rel='stylesheet' type='text/css' media="all and (min-width:960px)" href='css/lessthan769.css' />
-<link rel='stylesheet' type='text/css' media="all and (max-width:959px)" href='css/lessthan768.css' />
-<link rel='stylesheet' type='text/css' media="all and (max-width:640px)" href='css/lessthan640.css' />
-<link rel='stylesheet' type='text/css' media="all and (max-width:480px)" href='css/lessthan480.css' />
-<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
-<link rel="stylesheet" href="js/tipsy/tipsy.css" type="text/css" />
-<script type="text/javascript" src="js/tipsy/jquery.tipsy.js"></script>
-
-    
-    
-<link rel="shortcut icon" href="images/favicon.ico" />
-</head>
-<body>
-<!--wrapper start--><div id="wrapper">
+<div id="wrapper" data-role="view">
 <header class="clearfix">
 <nav>
        <div id="fullheds"><div id="menutops">  
         <div class="logo"><a href="./">&nbsp;</a></div> 
 		<ul class="nav-menu menu">
-            <li><a href="dashboard.php" class="activ"><span class="nc1"></span>Dashboard <b>10</b></a></li>
-            <li><a href="manage-leads.php"><span class="nc2"></span>Leads</a></li>
-            <li><a href="manage-case-landing.php"><span class="nc3"></span>Manage Cases</a></li>
-            <li><a href="manage-documents.php"><span class="nc4"></span>Documents</a></li>
-            <li><a href="report.php"><span class="nc5"></span>Reports</a></li>
-            <li><a href="manage-account.php"><span class="nc6"></span>Account</a></li>
-            <li><a href="logout.php"><span class="nc7"></span>Logout</a></li>
-            <li><a href="http://www.biz2credit.com"><span class="nc8"></span>Go back to Home</a></li>
+            <li><a href="#" class="activ"><span class="nc1"></span>Dashboard <b>10</b></a></li>
+            <li><a href="#"><span class="nc2"></span>Leads</a></li>
+            <li><a href="#"><span class="nc3"></span>Manage Cases</a></li>
+            <li><a href="#"><span class="nc4"></span>Documents</a></li>
+            <li><a href="#"><span class="nc5"></span>Reports</a></li>
+            <li><a href="#"><span class="nc6"></span>Account</a></li>
+            <li><a href="#"><span class="nc7"></span>Logout</a></li>
+            <li><a href="#"><span class="nc8"></span>Go back to Home</a></li>
         </ul>
 </div>	</div>
      
      <!-- helpfull prod--><div class="lefthelpdsk">
      <h6>Helpful Products</h6>
      <ul>
-      <li><a href="equifax.php"><span class="nc1"></span>Equifax</a></li>
-      <li><a href="IRS-transcript.php"><span class="nc2"></span>IRS Transcript</a></li>
-      <li><a href="UCC-search.php"><span class="nc3"></span>UCC Search</a></li>
-      <li><a href="e-signature.php"><span class="nc4"></span>E-Signature</a></li>
-      <li><a href="incorporation-documents.php"><span class="nc5"></span>Incorporation Documents</a></li>
+      <li><a href="#"><span class="nc1"></span>Equifax</a></li>
+      <li><a href="#"><span class="nc2"></span>IRS Transcript</a></li>
+      <li><a href="#"><span class="nc3"></span>UCC Search</a></li>
+      <li><a href="#"><span class="nc4"></span>E-Signature</a></li>
+      <li><a href="#"><span class="nc5"></span>Incorporation Documents</a></li>
      </ul>
      
      
@@ -59,7 +34,7 @@
 <section>
 <div class="helnum"><h2>Call toll free  877-861-2210</h2></div>
 <section>
-    <form id="B2cAppForms" class="cmxform" action="dashboard-application2.html" method="post" novalidate="novalidate">
+    <form id="B2cAppForms" class="cmxform" action="#" method="post" novalidate="novalidate">
       <article id="aplicn_tp">
         <div class="warps clearfix">
           <ul class="app_nav">
@@ -85,8 +60,9 @@
             <div class="toparea clearfix">
               <h2>Personal Financial Statement Schedules<span style="font-size:12px; font-weight:normal; display:block;">(Include totals in Personal Financial Statement where indicated.)</span></h2>
               <div class="coln">
-                <input type="submit" class="BTgry" value="Save &amp; Exit" name="">
-                <input type="submit" class="BTgren" value="Next" id="next" name="next">
+                <input name="" data-role="backbutton" type="submit" value="Back" class="BTgry">
+                <input name="" type="submit" value="Save &amp; Exit" class="BTgry">
+                <a href="views/9.html" data-role="button" class="BTgren"  id="next">Next</a>
               </div>
             </div>
             <div class="rws rw2 clearfix">
@@ -333,8 +309,9 @@
       <article id="aplicn_btm">
         <div class="warps">
           <div class="coln">
+            <input name="" data-role="backbutton" type="submit" value="Back" class="BTgry">
             <input name="" type="submit" value="Save &amp; Exit" class="BTgry">
-            <input name="next" type="submit" id="next" value="Next"  class="BTgren">
+            <a href="views/9.html" data-role="button" class="BTgren"  id="next">Next</a>
           </div>
         </div>
       </article>
@@ -342,7 +319,7 @@
   </section>
 
 <div class="copyright clearfix">
- <div class="copybx"> <a href="privacy-policy.html">Privacy</a> <span>|</span><a href="terms-of-use.html">Terms</a> <span>|</span><a href="sitemap.html">Sitemap</a>
+ <div class="copybx"> <a href="#">Privacy</a> <span>|</span><a href="#">Terms</a> <span>|</span><a href="#">Sitemap</a>
 <p>&copy; Biz2Credit.com 2012-13. All rights reserved.</p>
 </div>
 </div>
@@ -350,7 +327,4 @@
 </section>
 
 
- </div><!--wrapper  end-->
-<script type="text/javascript" src="js/jquery.dash.js"></script>
-</body>
-</html>
+ </div>
