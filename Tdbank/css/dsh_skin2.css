@@ -6,7 +6,6 @@
 html {height:100%; width:100%; margin:0px; padding:0px}
 p{ margin: 0px; padding: 0px 0px 13px 0px;}
 html body { margin: 0px; padding: 0px;  font-family:'OpenSansReg', Arial, Helvetica, sans-serif!important; font-size: 12px; color: #333333; font-weight:normal; }
-html body .km-flat{font-family:'OpenSansReg', Arial, Helvetica, sans-serif!important;}
 a{color: #666; text-decoration:none }
 a:hover{ color:#333;  text-decoration:none}
 *, * focus {    margin: 0;     outline: medium none; }
@@ -468,3 +467,5 @@ section section{ margin:0; padding-left:0;}
 html body #aplicn_tdBank .rws p, #aplicn_tdBank  h2, html body #aplicn_tdBank  h3, html body #aplicn_tdBank .rwfil p{ margin-left:0!important; margin-right:0!important; padding-left:0!important; padding-right:0!important;}
 html body #wrapper .copyright p{margin-left:0!important; margin-right:0!important; padding-left:0!important; padding-right:0!important;}
 html body #aplicn_tdBank  h2 span{width:480px!important}
+html .km-flat {font: normal 1em "OpenSansReg"!important;}
+

@@ -3,13 +3,13 @@
   <PropertyGroup>
     <ProjectGuid>50352ce4-7b44-446d-b792-a417c6a1dad8</ProjectGuid>
     <ProjectTypeGuids>{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}</ProjectTypeGuids>
-    <AppIdentifier>com.telerik.Tdbank</AppIdentifier>
+    <AppIdentifier>com.telerik.Biz2Credit</AppIdentifier>
     <ProjectName>Tdbank</ProjectName>
     <IsRunnable>true</IsRunnable>
     <FrameworkVersion>3.2.0</FrameworkVersion>
     <AndroidPermissions>android.permission.ACCESS_NETWORK_STATE;android.permission.GET_ACCOUNTS;android.permission.INTERNET;android.permission.READ_PHONE_STATE;android.permission.VIBRATE;android.permission.WRITE_EXTERNAL_STORAGE</AndroidPermissions>
     <CorePlugins>org.apache.cordova.device;org.apache.cordova.network-information;org.apache.cordova.dialogs;org.apache.cordova.splashscreen;org.apache.cordova.statusbar;org.apache.cordova.vibration</CorePlugins>
-    <DeviceOrientations>Portrait;Landscape</DeviceOrientations>
+    <DeviceOrientations>Landscape</DeviceOrientations>
     <iOSStatusBarStyle>Default</iOSStatusBarStyle>
     <AndroidHardwareAcceleration>false</AndroidHardwareAcceleration>
     <WP8SupportedResolutions>ID_RESOLUTION_WVGA;ID_RESOLUTION_WXGA;ID_RESOLUTION_HD720P</WP8SupportedResolutions>
