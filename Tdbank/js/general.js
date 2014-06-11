@@ -149,22 +149,24 @@ $('.Termloan1').click(function() {
 });
  
     
-console.log($('.rahman'));
-$('.rahman').change(function() {
+
+    
+    
+$('.dueyes1').live("change", function(){
       $(".dueyes").show();    
 });
-$('.rahman1').change(function() {
+$('.dueno1').live("change", function(){
       $(".dueyes").hide();    
 });
 
 
 
-$('.isapplicantyes').click(function() {	
+$('.isapplicantyes').live("change", function(){	
 
       $(".applicant").show();
     
 });
-$('.isapplicantno').click(function() {	
+$('.isapplicantno').live("change", function(){
 
       $(".applicant").hide();
     
@@ -176,30 +178,30 @@ $('.isapplicantyes1').click(function() {
       $(".applicant2").show();
     
 });
-$('.isapplicantno1').click(function() {	
+$('.isapplicantno1').live("change", function(){	
 
       $(".applicant2").hide();
     
 });
 
-$('.gamblingyes').click(function() {	
+$('.gamblingyes').live("change", function(){
 
       $(".gambling").show();
     
 });
-$('.gamblingno').click(function() {	
+$('.gamblingno').live("change", function(){
 
       $(".gambling").hide();
     
 });
 
 
-$('.overdraftyes').click(function() {	
+$('.overdraftyes').live("change", function(){
 
       $(".overdraft").show();
     
 });
-$('.overdraftno').click(function() {	
+$('.overdraftno').live("change", function(){	
 
       $(".overdraft").hide();
     
@@ -207,7 +209,7 @@ $('.overdraftno').click(function() {
 
 
 
-$('.other_title1').click(function() {	
+$('.other_title1').live("change", function(){
 	if($(this).is(':checked')) {		
       $(".other_title").show();
     } else {
@@ -220,12 +222,12 @@ $('.other_title1').click(function() {
 
 
 
-$('.rent1').click(function() {	
+$('.rent1').live("change", function(){
 
       $(".Rent").show();
     
 });
-$('.own1').click(function() {	
+$('.own1').live("change", function(){
 
       $(".Rent").hide();
     
@@ -233,21 +235,5 @@ $('.own1').click(function() {
 
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
