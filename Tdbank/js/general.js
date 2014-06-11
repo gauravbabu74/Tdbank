@@ -149,16 +149,14 @@ $('.Termloan1').click(function() {
 });
  
     
-
-    
-$('.dueyes1').tap(function(event) {
-    alert("test");
-	if($(this).is(':checked')) {		
-      $(".dueyes").show();
-    } else {
-       $(".dueyes").hide();
-    }
+console.log($('.rahman'));
+$('.rahman').change(function() {
+      $(".dueyes").show();    
 });
+$('.rahman1').change(function() {
+      $(".dueyes").hide();    
+});
+
 
 
 $('.isapplicantyes').click(function() {	
