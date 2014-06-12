@@ -17,6 +17,7 @@ $(document).ready(function(){
 		
 		
   });
+    
 $('.workingcapital1').click(function() {	
 	if($(this).is(':checked')) {		
       $(".specifyuse").show();
