@@ -71,24 +71,24 @@
               <div class="rws rw2 clearfix">
                 <div class="rwfil  clearfix">
                   <p>
-                    <input type="text" original-title="Business Legal Name" class="IN1 ipsm3 " name="business_legal_name" id="business_legal_name" placeholder="Business Legal Name:" required="">
+                    <input type="text" original-title="Business Legal Name" class="IN1 ipsm3 " name="business_legal_name" id="business_legal_name" placeholder="Business Legal Name" required="">
                   </p>
                   <p>
-                    <input type="text" original-title="Doing Business as (DBA) Name, if any" class="IN1 ipsm3 " name="doing_business" id="doing_business" placeholder="Doing Business as (DBA) Name, if any:" required="">
+                    <input type="text" original-title="Doing Business as (DBA) Name, if any" class="IN1 ipsm3 " name="doing_business" id="doing_business" placeholder="Doing Business as (DBA) Name, if any" required="">
                   </p>
                   <p>
-                    <input type="text" required="" placeholder="Primary Contact" id="primary_contact" name="primary_contact" class="IN1 ipsm3" original-title="Primary Contact:">
+                    <input type="text" required="" placeholder="Primary Contact" id="primary_contact" name="primary_contact" class="IN1 ipsm3" original-title="Primary Contact">
                   </p>
                 </div>
                 <div class="rwfil  clearfix">
                   <p>
-                    <input type="text" original-title="Tax I.D." class="IN1 ipsm3" name="tax_id" id="tax_id" placeholder="Tax I.D. #:" required="">
+                    <input type="text" original-title="Tax I.D." class="IN1 ipsm3" name="tax_id" id="tax_id" placeholder="Tax I.D. #" required="">
                   </p>
                   <p>
-                    <input type="text" original-title="Telephone" class="IN1 ipsm3" name="telephone" id="telephone" placeholder="Telephone #:" required="">
+                    <input type="text" original-title="Telephone" class="IN1 ipsm3" name="telephone" id="telephone" placeholder="Telephone #" required="">
                   </p>
                   <p>
-                    <input type="text" required="" placeholder="Email Address" id="email_address" name="email_address" class="IN1 ipsm3" original-title="Email Address:">
+                    <input type="text" required="" placeholder="Email Address" id="email_address" name="email_address" class="IN1 ipsm3" original-title="Email Address">
                   </p>
                 </div>
                 <div class="rwfil  clearfix">
@@ -223,7 +223,7 @@
                       <td colspan="3" valign="top"><p style=" padding-right: 5px; padding-top: 9px;">Date Business Established:</p>
                         <p>
                           <select original-title="Month" class="IN1" id="Month" name="Month" style="  padding-left: 0;
-    width: 69px;" required="">
+    width: 78px;" required="">
                             <option value="">Month</option>
                             <option value="">1</option>
                           </select>
@@ -236,9 +236,9 @@
                           </select>
                         </p>
                         <p>
-                          <select required="" name="bus_info_state2" id="bus_info_state2" class="IN1 ipsm3" style=" width:192px;" original-title="State of Incorporation">
+                          <select required="" name="bus_info_state2" id="bus_info_state2" class="IN1 ipsm3" style=" width:184px;" original-title="State of Incorporation">
                             <option value="">State of Incorporation</option>
-                            <option value="">State</option>
+                          <option value="1">Alabama</option><option value="2">Alaska</option><option value="4">Arizona</option><option value="5">Arkansas</option><option value="9">California</option>
                           </select>
                         </p>
                         <p>
@@ -280,8 +280,15 @@
                     </tr>
                     <tr>
                       <td width="33%" valign="top"><p>
-                          <input name="" type="checkbox" value="">
-                          Other</p></td>
+                          <input name="" type="checkbox" class="otherintp" value="">
+                          Other</p>
+                           <div style="clear:both;"></div>
+                        <div class="conditionBlock clearfix other22">
+                          <p  style="padding-bottom:0;">
+                            <input type="text" required="" placeholder="Please Describe" id="please_describe" name="Please Describe" class="sml" style="margin-bottom:0;" original-title="Please Describe">
+                          </p>
+                        </div>
+                          </td>
                       <td width="33%" valign="top">&nbsp;</td>
                       <td width="33%" valign="top">&nbsp;</td>
                     </tr>

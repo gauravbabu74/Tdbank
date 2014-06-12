@@ -2,22 +2,6 @@
 
 $(document).ready(function(){
 
-// tipsy
- $(function() {
-
-	  $('.inpbf').tipsy({gravity: 'se'});
-	   $('.IN1b').tipsy({gravity: 'se'});
-	   $('.IN3').tipsy({gravity: 'se'});
-	  $('.IN3b').tipsy({gravity: 'se'});
-	   $('.inpbf_sl').tipsy({gravity: 'se'});
-	    $('.IN1').tipsy({gravity: 'se'});
-		$('.IN5').tipsy({gravity: 'se'});
-		$('.IN6').tipsy({gravity: 'se'});
-		$('.IN4').tipsy({gravity: 'se'});
-		
-		
-  });
-    
 $('.workingcapital1').click(function() {	
 	if($(this).is(':checked')) {		
       $(".specifyuse").show();
@@ -175,7 +159,7 @@ $('.isapplicantno').live("change", function(){
 });
 
 
-$('.isapplicantyes1').click(function() {	
+$('.isapplicantyes1').live("change", function(){
 
       $(".applicant2").show();
     
@@ -227,6 +211,7 @@ $('.other_title1').live("change", function(){
 $('.rent1').live("change", function(){
 
       $(".Rent").show();
+	   $(".OwnedBlock").hide();
     
 });
 $('.own1').live("change", function(){
@@ -234,8 +219,61 @@ $('.own1').live("change", function(){
       $(".Rent").hide();
     
 });
+    
+$('.other1').live("change", function(){
 
+      $(".other11").show();
+    
+}); 
+  
+  
+  
+  
+  
+$('.own1').live("change", function(){
 
+      $(".Rent").hide();
+	     $(".OwnedBlock").show();
+    
+});
+    
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+$('.legal2').live("change", function(){
+
+      $(".legal").show();
+    
+});
+$('.legal1').live("change", function(){
+
+      $(".legal").hide();
+    
 });
 
+ 
+ 
+ 
+ $('.otherintp').live("change", function() {	
+	if($(this).is(':checked')) {		
+      $(".other22").show();
+    } else {
+       $(".other22").hide();
+    }
+});
+ 
+ 
+ 
+  
+
+});
 
