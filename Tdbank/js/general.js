@@ -232,7 +232,36 @@ $('.own1').live("change", function(){
       $(".Rent").hide();
     
 });
+    
+    
+    
+$('.other1').live("change", function(){
 
+      $(".other11").show();
+    
+}); 
+    
+    
+    
+$('.legal1').live("change", function(){
+
+      $(".legal").show();
+    
+});
+$('.legal2').live("change", function(){
+
+      $(".legal").hide();
+    
+});
+    
+
+    
+    
+    
+    
+    
+    
+    
 
 });
 
