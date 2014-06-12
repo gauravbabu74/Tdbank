@@ -4,6 +4,7 @@ $(document).ready(function(){
 
 // tipsy
  $(function() {
+
 	  $('.inpbf').tipsy({gravity: 'se'});
 	   $('.IN1b').tipsy({gravity: 'se'});
 	   $('.IN3').tipsy({gravity: 'se'});
@@ -232,36 +233,7 @@ $('.own1').live("change", function(){
       $(".Rent").hide();
     
 });
-    
-    
-    
-$('.other1').live("change", function(){
 
-      $(".other11").show();
-    
-}); 
-    
-    
-    
-$('.legal1').live("change", function(){
-
-      $(".legal").show();
-    
-});
-$('.legal2').live("change", function(){
-
-      $(".legal").hide();
-    
-});
-    
-
-    
-    
-    
-    
-    
-    
-    
 
 });
 

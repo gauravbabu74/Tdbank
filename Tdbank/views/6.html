@@ -1,4 +1,4 @@
-<div id="wrapper" data-role="view">
+<div id="wrapper" data-role="view" data-show="app.viewViewModel.viewModel.show" data-model="app.viewViewModel.viewModel">
 <header class="clearfix">
 <nav>
        <div id="fullheds"><div id="menutops">  
@@ -77,16 +77,16 @@
               </div>
               <div class="rwfil aut clearfix" style="float:none;">
                 <p>
-                  <input type="text" required="" placeholder="Store #" id="balance_sheet" name="balance_sheet" class="IN1 half" original-title="Store #">
+                  <input type="text" required="" placeholder="Store" id="balance_sheet" name="balance_sheet" class="IN1 half" original-title="Store">
                 </p>
                 <p>
-                  <input type="text"  required="" placeholder="Phone #" id="recent_tax_return" name="recent_tax_return" class="IN1 ipsm1" original-title="Phone #">
+                  <input type="text"  required="" placeholder="Phone" id="recent_tax_return" name="recent_tax_return" class="IN1 ipsm1" original-title="Phone">
                 </p>
               </div>
               <h3 class="subtitle clearfix" style=" margin-top:15px; float:none;">Business Information</h3>
               <div class="rwfil aut clearfix" style="float:none;">
                 <p>
-                  <input type="text" required="" placeholder="Business Legal Name" id="balance_sheet" name="BusinessnName" class="IN1 half" original-title="Business Legal Name">
+                  <input type="text" required="" placeholder="Business Legal Name:" id="balance_sheet" name="BusinessnName:" class="IN1 half" original-title="Business Legal Name:">
                 </p>
                 <p>
                   <input type="text"  required="" placeholder="Doing Business as (DBA) Name, in any" id="recent_tax_return" name="recent_tax_return" class="IN1 half" original-title="Doing Business as (DBA) Name, in any">
@@ -94,48 +94,49 @@
               </div>
               <br>
               <div class="rwfil  clearfix" style="float:none;">
-                <p><strong> Please provide information for anyone owning 10% or more of the business. We will accept an Accountant prepared personal financial statement attached to this form along with a customer signature acknowledging this form and disclosures.</strong></p>
+                <p><strong> Please provide information for anyone owning 10% or more of the business. (Attach additional sheets if necessary.)
+                  We will accept an Accountant prepared personal financial statement attached to this form along with a customer signature acknowledging this form and disclosures.</strong></p>
               </div>
               <h3 style="margin-top:0; float:none;" class="subtitle clearfix">Owner/Guarantor</h3>
               <div class="rwfil aut clearfix" style="float:none;">
                 <p>
-                  <input type="text" required="" placeholder="Name" id="balance_sheet" name="balance_sheet" class="IN1 half" original-title="Name">
+                  <input type="text" required="" placeholder="Name:" id="balance_sheet" name="balance_sheet" class="IN1 half" original-title="Name:">
                 </p>
               </div>
               <br>
               <div class="rwfil  clearfix">
                 <div class="titleLabel"><strong>Officer Title</strong></div>
                 <div class="clear"></div>
-                <p class="opt filter"><span style="width: 288px;"><strong>Sole Proprietorship or Business Individual:</strong></span>
-                  <input type="radio" value="" name="r22">
+                <p class="opt filter"><span style="width: 288px;">Sole Proprietorship or Business Individual:</span>
+                  <input type="checkbox" value="" name="">
                   <span>Owner</span></p>
               </div>
               <div class="rwfil  clearfix">
-                <p class="opt filter"><span><strong>Partnership:</strong></span>
-                  <input type="radio" value="" name="r22">
+                <p class="opt filter"><span>Partnership:</span>
+                  <input type="checkbox" value="" name="">
                   <span>Partner</span>
-                  <input type="radio" value="" name="r22">
+                  <input type="checkbox" value="" name="">
                   <span>Limited Partner</span></p>
               </div>
               <div class="rwfil  clearfix">
-                <p class="opt filter"><span><strong>Limited Liability Co:</strong></span>
-                  <input type="radio" value="" name="r22">
+                <p class="opt filter"><span>Limited Liability Co:</span>
+                  <input type="checkbox" value="" name="">
                   <span>Member</span>
-                  <input type="radio" value="" name="r22">
+                  <input type="checkbox" value="" name="">
                   <span>Manager</span></p>
               </div>
               <div class="rwfil  clearfix">
-                <p class="opt filter"><span><strong>Corp:</strong></span>
-                  <input type="radio" value="" name="r22">
+                <p class="opt filter"><span>Corp:</span>
+                  <input type="checkbox" value="" name="">
                   <span>President</span>
-                  <input type="radio" value="" name="r22">
+                  <input type="checkbox" value="" name="">
                   <span>Vice President</span>
-                  <input type="radio" value="" name="r22">
+                  <input type="checkbox" value="" name="">
                   <span>Corp Secretary</span></p>
               </div>
               <div class="rwfil  rws clearfix">
-                <p class="opt filter"><span><strong>Other:</strong></span>
-                  <input type="radio" class="other_title1"  value="" name="r22">
+                <p class="opt filter"><span>Other:</span>
+                  <input type="checkbox" class="other_title1"  value="" name="">
                 </p>
               </div>
               <div class="conditionBlock clearfix other_title">
@@ -149,9 +150,9 @@
                   <input type="text" original-title="Date of Birth:" class="IN1 ipsm1 calic" name="balance_sheet" id="balance_sheet" placeholder="Date of Birth" required="">
                 </p>
                 <p class="opt"><span> Veteran:</span>
-                  <input type="radio" value="" name="r33">
+                  <input type="radio" value="" name="">
                   <span>Yes</span>
-                  <input type="radio" value="" name="r33">
+                  <input type="radio" value="" name="">
                   <span>No</span></p>
               </div>
               <div class="rwfil  clearfix">
@@ -193,34 +194,29 @@
                   <span>Rent</span></p>
               </div>
               <div class="conditionBlock clearfix Rent">
-                <p style="padding-bottom:0;">
-                  <input type="text" original-title="(Principal, Interest, Taxes & Insurance) or Rent ($)" style="margin-bottom:0; width:280px;" class="IN1 ipsm3" name="Rent" id="Rent" placeholder="(Principal, Interest, Taxes & Insurance) or Rent ($)" required="">
+                <p style="padding-bottom:0;"> (Principal, Interest, Taxes & Insurance) or Rent:
+                  &nbsp;
+                  <input type="text" original-title="$" style="margin-bottom:0;" class="IN1 ipsm3" name="Rent" id="Rent" placeholder="$" required="">
                 </p>
               </div>
               <div class="rwfil  clearfix">
                 <p>
-                  <input type="text" original-title="Total Annual Income* ($)" class="IN1 ipsm3 " name="city" id="city" placeholder="Total Annual Income* ($)" required="">
+                  <input type="text" original-title="Total Annual Income*$" class="IN1 ipsm3 " name="city" id="city" placeholder="Total Annual Income*: $" required="">
                 </p>
                 <p>
-                
-                  
-                  <select original-title="% Ownership of Business" class="IN1 ipsm3" id="bus_info_state" name="Ownership of Business" required="">
-                  <option>% Ownership of Business</option>
-<option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option><option value="60">60</option><option value="61">61</option><option value="62">62</option><option value="63">63</option><option value="64">64</option><option value="65">65</option><option value="66">66</option><option value="67">67</option><option value="68">68</option><option value="69">69</option><option value="70">70</option><option value="71">71</option><option value="72">72</option><option value="73">73</option><option value="74">74</option><option value="75">75</option><option value="76">76</option><option value="77">77</option><option value="78">78</option><option value="79">79</option><option value="80">80</option><option value="81">81</option><option value="82">82</option><option value="83">83</option><option value="84">84</option><option value="85">85</option><option value="86">86</option><option value="87">87</option><option value="88">88</option><option value="89">89</option><option value="90">90</option><option value="91">91</option><option value="92">92</option><option value="93">93</option><option value="94">94</option><option value="95">95</option><option value="96">96</option><option value="97">97</option><option value="98">98</option><option value="99">99</option><option value="100">100</option>
-                                    
-                  </select>
+                  <input type="text" original-title="Home Phone" class="IN1 ipsm3" name="telephone" id="telephone" placeholder="% Ownership of Business:" required="">
                 </p>
-                <p><input type="text" original-title="Present Ownership Since" class="IN1 ipsm1 calic" name="Present Ownership Since" id="balance_sheet" placeholder="Present Ownership Since" style="width:182px;" required="">
+                <p>Present Ownership Since:&nbsp;&nbsp;
+                  <input type="text" original-title="Select Date" class="IN1 ipsm1 calic" name="balance_sheet" id="balance_sheet" placeholder="Select Date" style="width:182px;" required="">
                 </p>
               </div>
               <div style="float:none;" class="rwfil aut clearfix">
                 <p class="opt"><span>U.S. Citizen:</span>
-                  <input type="radio" value="" class="legal1" name="r44">
+                  <input type="radio" value="" class="own1" name="aAa">
                   <span>Yes</span>
-                  <input type="radio" value="legal2" name="r44">
+                  <input type="radio" value="" name="Aaa">
                   <span>No</span></p>
               </div>
-              <div class="conditionBlock clearfix legal">
               <div style="float:none;" class="rwfil aut clearfix">
                 <p class="opt"><span>Legal Permanent Resident Alien:</span>
                   <input type="radio" value="" class="own1" name="BBB">
@@ -228,16 +224,15 @@
                   <input type="radio" value="" name="BBB">
                   <span>No</span></p>
               </div>
-              </div>
               <div style="float:none;" class="rwfil aut clearfix">
                 <p>
-                  <input type="text"  original-title="Checking Balance ($)" class="IN1 ipsm3 " name="" id="" placeholder="Checking Balance ($)" required="">
+                  <input type="text"  original-title="Checking Balance: $" class="IN1 ipsm3 " name="" id="" placeholder="Checking Balance: $" required="">
                 </p>
                 <p>
-                  <input type="text"  original-title="Savings Balance ($)" class="IN1 ipsm3 " name="" id="" placeholder="Savings Balance ($)" required="">
+                  <input type="text"  original-title="Savings Balance: $" class="IN1 ipsm3 " name="" id="" placeholder="Savings Balance: $" required="">
                 </p>
                 <p>
-                  <input type="text"  original-title="Presently Bank at" class="IN1 ipsm3 " name="" id="" placeholder="Presently Bank at" required="">
+                  <input type="text"  original-title="Presently Bank at:" class="IN1 ipsm3 " name="" id="" placeholder="Presently Bank at:" required="">
                 </p>
               </div>
               <p>*Alimony, child support, or separate maintenance income need not be revealed if you do not wish to have it considered as a basis for repaying this obligation.</p>
