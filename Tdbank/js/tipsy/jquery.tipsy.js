@@ -117,7 +117,7 @@
         
         if (options === true) {
             return this.data('tipsy');
-        } else if (typeof options == 'string') {
+        } else if (typeof options === 'string') {
             return this.data('tipsy')[options]();
         }
         
@@ -135,7 +135,7 @@
         function enter() {
             var tipsy = get(this);
             tipsy.hoverState = 'in';
-            if (options.delayIn == 0) {
+            if (options.delayIn === 0) {
                 tipsy.show();
             } else {
                 setTimeout(function() { if (tipsy.hoverState == 'in') tipsy.show(); }, options.delayIn);
@@ -145,10 +145,10 @@
         function leave() {
             var tipsy = get(this);
             tipsy.hoverState = 'out';
-            if (options.delayOut == 0) {
+            if (options.delayOut === 0) {
                 tipsy.hide();
             } else {
-                setTimeout(function() { if (tipsy.hoverState == 'out') tipsy.hide(); }, options.delayOut);
+                setTimeout(function() { if (tipsy.hoverState === 'out') tipsy.hide(); }, options.delayOut);
             }
         };
         
@@ -156,7 +156,7 @@
         
         if (options.trigger !== 'manual') {
             var binder   = options.live ? 'live' : 'bind',
-                eventIn  = options.trigger === 'hover' ? 'mouseenter' : 'click',
+                eventIn  = options.trigger === 'hover' ? 'mouseenter' : 'focus',
                 eventOut = options.trigger === 'hover' ? 'mouseleave' : 'blur';
             this[binder](eventIn, enter)[binder](eventOut, leave);
         }
@@ -172,7 +172,7 @@
         fallback: '',
         gravity: 'n',
         html: false,
-        live: false,
+        live: true,
         offset: 0,
         opacity: 0.8,
         title: 'title',
