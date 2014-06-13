@@ -19,9 +19,22 @@
 <script type="text/javascript" src="js/tipsy/jquery.tipsy.js"></script>
 <link rel="shortcut icon" href="images/favicon.ico" />
 <script src="scripts/app.js"></script>
-    <script src="scripts/viewload.js"></script>
+<script src="scripts/viewload.js"></script>
 </head>
 <body>
+<!--view 1-->
+<div id="view1" data-role="view"> <img src="styles/images/1.png" alt="demopage" border="0" usemap="#Map" >
+  <map name="Map">
+    <area shape="rect" coords="4,194,171,237" href="#view2">
+  </map>
+</div>
+'
+<!--view 2-->
+<div id="view2" data-role="view"> <img src="styles/images/2.png" alt="demopage" border="0" usemap="#Map2" >
+  <map name="Map2">
+    <area shape="rect" coords="848,118,990,150" href="#wrapper">
+  </map>
+</div>
 <!--Home View-->
 <div id="wrapper" data-role="view">
   <header class="clearfix">
@@ -30,9 +43,9 @@
         <div id="menutops">
           <div class="logo"><a href="./">&nbsp;</a></div>
           <ul class="nav-menu">
-            <li><a href="#" data-role="button" class="activ"><span class="nc1"></span>Dashboard <b>10</b></a></li>
+            <li><a href="#" data-role="button"><span class="nc1"></span>Dashboard <b>10</b></a></li>
             <li><a href="#"><span class="nc2"></span>Leads</a></li>
-            <li><a href="#"><span class="nc3"></span>Manage Cases</a></li>
+            <li><a href="#" class="activ"><span class="nc3"></span>Manage Cases</a></li>
             <li><a href="#"><span class="nc4"></span>Documents</a></li>
             <li><a href="#"><span class="nc5"></span>Reports</a></li>
             <li><a href="#"><span class="nc6"></span>Account</a></li>
@@ -66,6 +79,7 @@
             <ul class="app_nav">
               <li class="activ"><span>Business Information</span></li>
               <li><span>Personal Financial Statement</span></li>
+              <li><span>Document List</span></li>
             </ul>
           </div>
         </article>
@@ -347,7 +361,6 @@
                                     </p>
                                   </div></td>
                               </tr>
-
                               <tr>
                                 <td width="100%"><p>
                                     <label>
@@ -359,7 +372,7 @@
                                 <td width="100%"><div class="conditionBlock clearfix Expresslease">
                                     <p  style="padding-bottom:0;"> <span style="display:inline-block;margin-bottom: 0;width: 68px;"> Term</span>
                                       <select original-title="Select Years" class="IN1b ipsm3" id="fixed_rate" name="fixed_rate" required="">
-                                      <option>Select Term</option>
+                                        <option>Select Term</option>
                                         <option value="">1</option>
                                         <option value="">2</option>
                                         <option value="">3</option>
@@ -476,5 +489,49 @@
     </div>
   </section>
 </div>
+<!--view 3-->
+<div id="view3" data-role="view"> <img src="styles/images/3.png" alt="demopage" border="0" usemap="#Map3" >
+  <map name="Map3">
+    <area shape="rect" coords="822,166,986,410" href="#view4">
+  </map>
+</div>
+<!--view 4-->
+<div id="view4" data-role="view"> <img src="styles/images/4.png" alt="demopage" border="0" usemap="#Map4"  >
+  <map name="Map4">
+    <area shape="rect" coords="343,173,424,206" href="#view5">
+  </map>
+</div>
+<!--view 5-->
+<div id="view5" data-role="view"> <img src="styles/images/5.png" alt="demopage" border="0" usemap="#Map5" >
+  <map name="Map5">
+    <area shape="rect" coords="204,375,284,431" href="#view6">
+  </map>
+</div>
+<!--view 6-->
+<div id="view6" data-role="view"> <img src="styles/images/6.png" alt="demopage" border="0" usemap="#Map6" >
+  <map name="Map6">
+    <area shape="rect" coords="221,171,816,215" href="#view7">
+  </map>
+</div>
+<!--view 7-->
+<div id="view7" data-role="view"> <img src="styles/images/7.png" alt="demopage" border="0" usemap="#Map7" >
+  <map name="Map7">
+    <area shape="rect" coords="208,476,309,512" href="#view8">
+  </map>
+</div>
+<!--view 8-->
+<div id="view8" data-role="view"> <img src="styles/images/8.png" alt="demopage" border="0" usemap="#Map8" >
+  <map name="Map8">
+    <area shape="rect" coords="192,190,990,281" href="#view9">
+  </map>
+</div>
+<!--view 9-->
+<div id="view9" data-role="view"> <img src="styles/images/9.png" alt="demopage" border="0" usemap="#Map9"  >
+  <map name="Map9">
+    <area shape="rect" coords="6,4,996,728" href="#view10">
+  </map>
+</div>
+<!--view 9-->
+<div id="view10" data-role="view"> <a href="#view1"><img src="styles/images/10.png" alt="demopage" border="0" ></a></div>
 </body>
 </html>
