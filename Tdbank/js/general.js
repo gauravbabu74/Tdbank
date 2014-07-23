@@ -65,7 +65,14 @@ $('.realestate1').click(function() {
 
 $('.commercialmortgage1').click(function() {	
 	if($(this).is(':checked')) {		
-      $(".commercialmortgage").show();
+        $(".commercialmortgage").show();
+        $(".Lineofcredit").hide();
+        $(".Timeloan").hide();
+        $(".lettercredit").hide();
+        $(".Expresslease").hide();
+        $(".SBHome").hide();
+        $(".ACH").hide();
+        $(".Termloan").hide();
     } else {
        $(".commercialmortgage").hide();
     }
@@ -75,7 +82,14 @@ $('.commercialmortgage1').click(function() {
 
 $('.Lineofcredit1').click(function() {	
 	if($(this).is(':checked')) {		
-      $(".Lineofcredit").show();
+    $(".Lineofcredit").show();
+    $(".commercialmortgage").hide();
+    $(".Timeloan").hide();
+    $(".lettercredit").hide();
+    $(".Expresslease").hide();
+    $(".SBHome").hide();
+    $(".ACH").hide();
+    $(".Termloan").hide();
     } else {
        $(".Lineofcredit").hide();
     }
@@ -85,7 +99,14 @@ $('.Lineofcredit1').click(function() {
 
 $('.Timeloan1').click(function() {	
 	if($(this).is(':checked')) {		
-      $(".Timeloan").show();
+    $(".Timeloan").show();
+    $(".commercialmortgage").hide();
+    $(".Lineofcredit").hide();
+    $(".lettercredit").hide();
+    $(".Expresslease").hide();
+    $(".SBHome").hide();
+    $(".ACH").hide();
+    $(".Termloan").hide();
     } else {
        $(".Timeloan").hide();
     }
@@ -93,7 +114,14 @@ $('.Timeloan1').click(function() {
 
 $('.lettercredit1').click(function() {	
 	if($(this).is(':checked')) {		
-      $(".lettercredit").show();
+    $(".lettercredit").show();
+    $(".commercialmortgage").hide();
+    $(".Lineofcredit").hide();
+    $(".Timeloan").hide();
+    $(".Expresslease").hide();
+    $(".SBHome").hide();
+    $(".ACH").hide();
+    $(".Termloan").hide();
     } else {
        $(".lettercredit").hide();
     }
@@ -102,7 +130,14 @@ $('.lettercredit1').click(function() {
 
 $('.Expresslease1').click(function() {	
 	if($(this).is(':checked')) {		
-      $(".Expresslease").show();
+    $(".Expresslease").show();
+    $(".commercialmortgage").hide();
+    $(".Lineofcredit").hide();
+    $(".Timeloan").hide();
+    $(".lettercredit").hide();
+    $(".SBHome").hide();
+    $(".ACH").hide();
+    $(".Termloan").hide();
     } else {
        $(".Expresslease").hide();
     }
@@ -111,7 +146,14 @@ $('.Expresslease1').click(function() {
 
 $('.ACH1').click(function() {	
 	if($(this).is(':checked')) {		
-      $(".ACH").show();
+    $(".ACH").show();
+    $(".commercialmortgage").hide();
+    $(".Lineofcredit").hide();
+    $(".Timeloan").hide();
+    $(".lettercredit").hide();
+    $(".Expresslease").hide();
+    $(".SBHome").hide();
+    $(".Termloan").hide();
     } else {
        $(".ACH").hide();
     }
@@ -120,7 +162,14 @@ $('.ACH1').click(function() {
 
 $('.SBHome1').click(function() {	
 	if($(this).is(':checked')) {		
-      $(".SBHome").show();
+    $(".SBHome").show();
+    $(".commercialmortgage").hide();
+    $(".Lineofcredit").hide();
+    $(".Timeloan").hide();
+    $(".lettercredit").hide();
+    $(".Expresslease").hide();
+    $(".ACH").hide();
+    $(".Termloan").hide();
     } else {
        $(".SBHome").hide();
     }
@@ -128,7 +177,14 @@ $('.SBHome1').click(function() {
 
 $('.Termloan1').click(function() {	
 	if($(this).is(':checked')) {		
-      $(".Termloan").show();
+    $(".Termloan").show();
+    $(".commercialmortgage").hide();
+    $(".Lineofcredit").hide();
+    $(".Timeloan").hide();
+    $(".lettercredit").hide();
+    $(".Expresslease").hide();
+    $(".SBHome").hide();
+    $(".ACH").hide();
     } else {
        $(".Termloan").hide();
     }
@@ -272,7 +328,11 @@ $('.legal1').live("change", function(){
 });
  
  
- 
+ $('.tempr').live("change", function(){
+
+      $(".other11").hide();
+    
+});
   
 
 });
